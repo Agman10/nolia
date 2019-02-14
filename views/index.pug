@@ -2,29 +2,29 @@ extends layout
 block head
 
 block content
-  .bg-container
-    .layer3
-    .layer2
-    .layer1
-  .cover-container.d-flex.w-100.h-100.p-3.mx-auto.flex-column
-    header.masthead.mb-auto
-      .inner
-        img.masthead-brand(src='/images/nti_logo_white.svg')
-        nav.nav.nav-masthead.justify-content-center
-          a.nav-link.active(href='#') Home
-          a.nav-link(href='#') Features
-          a.nav-link(href='#') Contact
-    main.inner.cover(role='main')
-      h1.cover-heading Gymnasieingenjör
-      p.lead
-        | Gymnasieingenjör TE4 är ett ettårigt program du kan läsa efter du avslutat dina gymnasiestudier.
-      p.lead
-        a.btn.btn-lg.btn-secondary(href='#') Learn more
-    footer.mastfoot.mt-auto
-      .inner
-        p
-          | Cover template for 
-          a(href='https://getbootstrap.com/') Bootstrap
-          | , by 
-          a(href='https://twitter.com/mdo') @mdo
-          | .
+  .bg-container.cover-container.w-100.h-100.d-felx.mx-auto
+    .layer3.cover-container.w-100.h-100
+    .layer2.cover-container.w-100.h-100
+    .layer1.cover-container.w-100.h-100
+    .cover-container.d-flex.w-100.h-100.p-3.mx-auto.flex-column.layer4
+      header.masthead.mb-auto
+        .inner
+          img.masthead-brand(src='/images/nti_logo_white.svg')
+          nav.nav.nav-masthead.justify-content-center
+            a.nav-link.active(href='#') Home
+            a.nav-link(href='#') Features
+            a.nav-link(href='#') Contact
+      main.inner.cover(role='main')
+        h1.cover-heading.text-white Gymnasieingenjör
+        p.lead.text-white
+          | Gymnasieingenjör TE4 är ett ettårigt program du kan läsa efter du avslutat dina gymnasiestudier.
+        p.lead
+          a.btn.btn-lg.btn-secondary(href='#') Learn more
+      footer.mastfoot.mt-auto
+        .inner
+          p
+            | Cover template for 
+            a(href='https://getbootstrap.com/') Bootstrap
+            | , by 
+            a(href='https://twitter.com/mdo') @mdo
+            | .
