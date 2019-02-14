@@ -1,3 +1,9 @@
+@font-face {
+  font-family: soleto;
+  src: url(/stylesheets/soleto.ttf);
+  font-family: soleto-xbold;
+  src: url(/stylesheets/soleto-xbold.ttf);
+}
 /* * Globals */
 /* Links */
 a {
@@ -31,7 +37,9 @@ body {
   height: 100%;
   background-color: #333;
   background-image: url(/images/nti_lila_bollar-01.png);
-  background-repeat: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: -ms-flexbox;
   display: flex;
   color: #fff;
@@ -88,9 +96,44 @@ body {
   font-weight: 700;
 }
 
+/* * Paraflax */
+.bg-container {
+  position: relative;
+}
+
+.layer3 {
+  background-image: url(/images/layer_3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+  background-image: url(/images/layer_2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+}
+.layer1 {
+  background-image: url(/images/layer_1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 3;
+  position: relative;
+}
+
 /* * Footer */
 .mastfoot {
   color: rgba(255, 255, 255, 0.5);
+}
+
+/* * text */
+.cover-heading {
+  font-family: soleto-xbold, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
 }
 
 /*# sourceMappingURL=style.css.map */
