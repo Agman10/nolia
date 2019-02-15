@@ -1,8 +1,18 @@
 @font-face {
-  font-family: soleto;
-  src: url(/stylesheets/soleto.ttf);
-  font-family: soleto-xbold;
-  src: url(/stylesheets/soleto-xbold.ttf);
+  font-family: Solet;
+  src: url("/stylesheets/Dalton Maag - Soleto.ttf");
+}
+@font-face {
+  font-family: Soleto XBold;
+  src: url("/stylesheets/Dalton Maag - Soleto XBold.ttf");
+}
+@font-face {
+  font-family: Soleto Light;
+  src: url("/stylesheets/Dalton Maag - Soleto Light.ttf");
+}
+@font-face {
+  font-family: Soleto Medium;
+  src: url("/stylesheets/Dalton Maag - Soleto Medium.ttf");
 }
 /* * Globals */
 /* Links */
@@ -36,14 +46,20 @@ html {
 body {
   height: 100%;
   background-color: #000;
-}
-
-main {
-  z-index: 10;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 }
 
 .cover-container {
   max-width: 42em;
+  z-index: 100;
+}
+
+main {
+  z-index: 100;
 }
 
 /* * Header */
@@ -91,44 +107,6 @@ main {
   font-weight: 700;
 }
 
-/* * Paraflax */
-.layer4 {
-  z-index: 10;
-}
-
-.layer3 {
-  background-image: url(/images/layer_3.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  z-index: 1;
-  position: absolute;
-  height: 90% !important;
-  width: 90% !important;
-}
-
-.layer2 {
-  background-image: url(/images/layer_2.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  z-index: 2;
-  position: absolute;
-  height: 90% !important;
-  width: 90% !important;
-}
-
-.layer1 {
-  background-image: url(/images/layer_1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  z-index: 3;
-  position: absolute;
-  height: 90% !important;
-  width: 90% !important;
-}
-
 /* * Footer */
 .mastfoot {
   color: rgba(255, 255, 255, 0.5);
@@ -136,9 +114,70 @@ main {
 
 /* * text */
 .cover-heading {
-  font-family: soleto-xbold, sans-serif;
+  font-family: "Soleto XBold", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.12rem;
+}
+
+.parallax-container {
+  height: 100%;
+  width: 100%;
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: columnr;
+}
+.parallax-container-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+}
+@media only screen and (max-width: 800px) {
+  .parallax-container {
+    display: none;
+  }
+}
+.parallax-container__layer1 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  min-height: 553px;
+  z-index: 3;
+  min-width: 965px;
+  background-image: url("/images/layer_1.png");
+}
+.parallax-container__layer2 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  min-height: 289px;
+  z-index: 5;
+  min-width: 690px;
+  left: 136px;
+  top: 131px;
+  background-image: url("/images/layer_2.png");
+}
+.parallax-container__layer3 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  min-height: 230px;
+  z-index: 12;
+  min-width: 576px;
+  top: 160px;
+  left: 194px;
+  background-image: url("/images/layer_3.png");
 }
 
 /*# sourceMappingURL=main.css.map */
